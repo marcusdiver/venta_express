@@ -12,7 +12,7 @@ class LoginTest(BaseCase):
 
     def test_login_with_valid_credential(self):
         # make sure title is available
-        LoginPage.click_popup_button(self)
+        .click_popup_button(self)
 
     def tearDown(self):
         # self.driver.quit()
