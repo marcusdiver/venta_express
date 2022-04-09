@@ -10,3 +10,8 @@ class LoginPage(BaseCase):
     def click_popup_button(self):
         self.click(HomePageLocators.CLOSE_POPUP_BUTTON)
 
+    def click_login_button(self):
+        self.click(HomePageLocators.LOGIN_BUTTON)
+
+
+
