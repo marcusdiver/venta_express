@@ -1,7 +1,10 @@
-version: 2.1
-orbs:
-    hello: circleci/hello-build@0.0.5
-workflows:
-    "Hello Workflow":
-        jobs:
-          - hello/hello-build
+version: 2
+jobs:
+  build:
+    # ...
+    steps:
+      - checkout  # checkout source code to working directory
+      - run:
+          command: |  # use pipenv to install dependencies
+            sudo pip install pipenv
+            pipenv install
