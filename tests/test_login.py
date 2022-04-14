@@ -11,9 +11,17 @@ class LoginTest(BaseCase):
         LoginPage.open_page(self)
 
     def test_login_with_valid_credential(self):
-        # make sure title is available
+        # user clicks on popup button
         LoginPage.click_popup_button(self)
+
+        # user clicks on login button
         LoginPage.click_login_button(self)
+        self.wait(3)
+        # user enters correct email
+        LoginPage.enter_correctly_email_address(self, HomePageLocators.EMAIL_CREDENTIAL)
+        self.wait(3)
+        # user enters correct password
+        LoginPage.enter_correctly_password(self, HomePageLocators.PASS_CREDENTIAL)
 
     def tearDown(self):
         # self.driver.quit()
